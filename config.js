@@ -1,7 +1,7 @@
 const siteMetadata = {
     title: `Elemental`,
     siteUrl: `https://alemarcha.github.io`,
-    pathPrefix: "/elemental-gatsby",
+    pathPrefix: `/elemental-blog`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
     icon: `/images/icon.png`,
