@@ -6,7 +6,7 @@
     "license": "MIT",
     "scripts": {
         "build": "gatsby build",
-        "build-path": "yarn run clean && gatsby build --prefix-paths",
+        "build-path": "npm run clean && gatsby build --prefix-paths",
         "develop": "gatsby develop",
         "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
         "start": "npm run develop",

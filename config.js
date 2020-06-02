@@ -1,7 +1,6 @@
 const siteMetadata = {
     title: `Elemental`,
-    siteUrl: `https://alemarcha.github.io`,
-    pathPrefix: `/elemental-blog`,
+    siteUrl: `https://rubenmartinezch.zyns.com`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
     icon: `/images/icon.png`,
