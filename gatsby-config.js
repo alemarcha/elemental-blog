@@ -1,10 +1,11 @@
-const {siteMetadata} =  require("./config");
+const { siteMetadata } = require("./config")
 const tailwindConfig = require("./tailwind.config")
 
 const plugins = [
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify-cms`,
     {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -42,15 +43,15 @@ const plugins = [
     {
         resolve: `gatsby-plugin-postcss`,
         options: {
-          postCssPlugins: [
-            require(`tailwindcss`)(tailwindConfig),
-            require(`autoprefixer`),
-            ...(process.env.NODE_ENV === `production`
-              ? [require(`cssnano`)]
-              : []),
-          ],
+            postCssPlugins: [
+                require(`tailwindcss`)(tailwindConfig),
+                require(`autoprefixer`),
+                ...(process.env.NODE_ENV === `production`
+                    ? [require(`cssnano`)]
+                    : []),
+            ],
         },
-      },
+    },
 ]
 
 if (siteMetadata.disqus) {
