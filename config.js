@@ -1,6 +1,7 @@
 const siteMetadata = {
     title: `Elemental`,
-    siteUrl: `http://localhost`,
+    siteUrl: `https://alemarcha.github.io`,
+    pathPrefix: "/elemental-gatsby",
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
     icon: `/images/icon.png`,

@@ -64,6 +64,7 @@ if (siteMetadata.disqus) {
 }
 
 module.exports = {
+    pathPrefix: siteMetadata.pathPrefix,
     siteMetadata: siteMetadata,
     plugins: plugins,
 }
