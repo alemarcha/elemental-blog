@@ -30,6 +30,7 @@ const plugins = [
     {
         resolve: `gatsby-plugin-mdx`,
         options: {
+            extensions: [".mdx", ".md"],
             gatsbyRemarkPlugins: [
                 {
                     resolve: `gatsby-remark-images`,

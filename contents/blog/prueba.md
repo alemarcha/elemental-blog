@@ -1,8 +1,8 @@
 ---
 title: Something Hot
 date: 2019-06-29
-image: ./image.jpg
-banner: ./banner.jpg
+image: ./assets/carbon.png
+banner: ./assets/carbon.png
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 
@@ -26,10 +26,10 @@ Lorem ipsum dolor sit amet, <a title="test link" href="#">test link</a> adipisci
 
 <abbr title="Hyper Text Markup Language">HTML</abbr> and
 <abbr title="Cascading Style Sheets">
-    CSS
+CSS
 </abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type
 <code>
-    COPY <var>filename</var>
+COPY <var>filename</var>
 </code>.
 <del>Dinner's at 5:00.</del>
 <ins>Let's make that 7.</ins> This
@@ -65,7 +65,7 @@ Labore et dolore.
 2. List Item 2
     1. Nested list item A
     2. Nested list item B
-5. List Item 3
+3. List Item 3
 
 ### Unordered List
 
@@ -103,7 +103,6 @@ Labore et dolore.
         </tr>
     </tbody>
 </table>
-
 
 ### Code
 
