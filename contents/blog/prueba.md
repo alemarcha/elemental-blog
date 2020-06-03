@@ -1,8 +1,8 @@
 ---
 title: Something Hot
 date: 2019-06-29
-image: ./assets/carbon.png
-banner: ./assets/carbon.png
+image: /assets/carbon.png
+banner: /assets/carbon.png
 description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 ---
 

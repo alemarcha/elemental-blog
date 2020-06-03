@@ -6,7 +6,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     if (node.internal.type === `Mdx`) {
         const slug = createFilePath({ node, getNode })
         const sourceName = getNode(node.parent).sourceInstanceName
-        const prefix = sourceName === "basepages" ? '' : '/'+sourceName;
+        const prefix = sourceName === "basepages" ? "" : "/" + sourceName
 
         createNodeField({
             node,
@@ -19,8 +19,33 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             value: sourceName,
         })
     }
+    const { frontmatter } = node
+    if (frontmatter) {
+        const { image, banner } = frontmatter
+        if (image) {
+            if (image.indexOf("/assets") === 0) {
+                console.log("image")
+                console.log(image)
+                frontmatter.image = path.relative(
+                    path.dirname(node.fileAbsolutePath),
+                    path.join(__dirname, "/contents/blog/", image)
+                )
+                console.log(frontmatter.image)
+            }
+        }
+        if (banner) {
+            if (banner.indexOf("/assets") === 0) {
+                console.log("banner")
+                console.log(banner)
+                frontmatter.banner = path.relative(
+                    path.dirname(node.fileAbsolutePath),
+                    path.join(__dirname, "/contents/blog/", banner)
+                )
+                console.log(frontmatter.banner)
+            }
+        }
+    }
 }
-
 
 exports.createPages = ({ graphql, actions }) => {
     const { createPage } = actions
@@ -44,7 +69,9 @@ exports.createPages = ({ graphql, actions }) => {
                     }
                 }
             }
-            portfolio: allMdx(filter: { fields: { sourceName: { eq: "portfolio" } } }) {
+            portfolio: allMdx(
+                filter: { fields: { sourceName: { eq: "portfolio" } } }
+            ) {
                 edges {
                     node {
                         id
@@ -88,11 +115,12 @@ exports.createPages = ({ graphql, actions }) => {
             })
         })
 
-
         const portfolioItems = result.data.portfolio.edges
         const portfolioItemsPerPage =
             result.data.limitPost.siteMetadata.portfolioItemsPerPage
-        const numPortfolioItems = Math.ceil(portfolioItems.length / portfolioItemsPerPage)
+        const numPortfolioItems = Math.ceil(
+            portfolioItems.length / portfolioItemsPerPage
+        )
 
         Array.from({ length: numPortfolioItems }).forEach((_, i) => {
             createPage({
