@@ -3,7 +3,6 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import { Logo } from "./utils"
 import Navlinks from "./navigation-list"
 
-
 export default function() {
     const query = useStaticQuery(graphql`
         query {
@@ -14,6 +13,8 @@ export default function() {
                         name
                         url
                     }
+                    author
+                    linkAuthor
                 }
             }
         }
@@ -28,21 +29,28 @@ export default function() {
             <div className="container mx-auto text-center">
                 <div className="flex justify-center my-3 mb-6">
                     <Link to="/" title={query.site.siteMetadata.title}>
-                        <Logo className="w-12"/>
+                        <Logo className="w-12" />
                     </Link>
                 </div>
                 <div className="text-color-2 my-3 footer-links animated-link-parent">
-                    <Navlinks className="flex items-center justify-center flex-wrap" withThemeSwitch={false}/>
+                    <Navlinks
+                        className="flex items-center justify-center flex-wrap"
+                        withThemeSwitch={false}
+                    />
                 </div>
-                <div
-                    className="text-color-2 my-3"
-                >
-                    <ul>
-                    {footerLinks} 
-                    </ul>
+                <div className="text-color-2 my-3">
+                    <ul>{footerLinks}</ul>
                 </div>
                 <p className="text-color-default text-lg">
-                    Copyright &copy; {query.site.siteMetadata.title}{" "}
+                    Copyright &copy; Hecho por{" "}
+                    <span className="text-color-2 my-3 footer-links animated-link-parent">
+                        <Link
+                            to={query.site.siteMetadata.linkAuthor}
+                            title={query.site.siteMetadata.author}
+                        >
+                            <span>{query.site.siteMetadata.author}</span>
+                        </Link>{" "}
+                    </span>{" "}
                     {new Date().getFullYear()}
                 </p>
             </div>

@@ -19,6 +19,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
             value: sourceName,
         })
     }
+
+    // Esto nos sirve para que al guardar el md desde netlify y compilarlo, pongamos los fields del md image y banner de forma relativa en vez absoluta
     const { frontmatter } = node
     if (frontmatter) {
         const { image, banner } = frontmatter

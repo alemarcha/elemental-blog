@@ -37,12 +37,12 @@ export default ({ data, location }) => {
             location={location}
         >
             <Wall data={siteData} />
-            {siteData.about !== "" && <About data={siteData.about} />}
-            <div className="px-4 lg:px-0" id="portfolio">
+            {/* {siteData.about !== "" && <About data={siteData.about} />} */}
+            {/* <div className="px-4 lg:px-0" id="portfolio">
                 {portfolioList}
-            </div>
+            </div> */}
             <Blog>{blogList}</Blog>
-            <Contact data={siteData.contact} />
+            {/* <Contact data={siteData.contact} /> */}
         </Layout>
     )
 }
@@ -75,7 +75,6 @@ const Wall = ({ data }) => {
         spanAttrs.style = {
             backgroundImage: `url('${data.titleImage}')`,
         }
-
     }
 
     const innerComponents = (
@@ -94,13 +93,13 @@ const Wall = ({ data }) => {
                 {data.introTag}
             </p>
             <p className="text-base lg:text-lg mt-4">{data.description}</p>
-            <ScrollIntoView selector="#portfolio">
+            {/* <ScrollIntoView selector="#portfolio">
                 <Button
                     title="SEE WORKS"
                     type="button"
                     iconRight={<ArrowRight />}
                 />
-            </ScrollIntoView>
+            </ScrollIntoView> */}
         </React.Fragment>
     )
 
@@ -156,7 +155,7 @@ const About = ({ data }) => {
 const Blog = ({ children }) => {
     return (
         <div className="container mx-auto px-0">
-            <div className="pt-20 pb-10 text-center lg:pt-40 lg:pb-20">
+            <div className="pt-20 pb-10 text-center lg:pt-10 lg:pb-20">
                 <h2 className="text-color-1 font-black text-5xl lg:text-6xl">
                     Blog
                 </h2>

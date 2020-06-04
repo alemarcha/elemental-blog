@@ -1,5 +1,5 @@
 const siteMetadata = {
-    title: `Elemental`,
+    title: `Rubén`,
     siteUrl: `https://rubenmartinezch.zyns.com`,
     capitalizeTitleOnHome: false,
     logo: `/images/logo.png`,
@@ -7,14 +7,15 @@ const siteMetadata = {
     titleImage: `/images/wall.png`,
     ogImage: `/images/wall.png`,
     twoColumnWall: true,
-    introTag: `PHOTOGRAPHER | VIDEOGRAPHER`,
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet accumsan arcu. Proin ac consequat arcu.`,
+    introTag: `LOREM | IPSUM`,
+    description: `Aquí hay que poner una descripción`,
     about:
         "Cras accumsan a lectus at tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus elementum dapibus dictum. Mauris auctor quam nec est tincidunt hendrerit. Donec pulvinar lobortis mauris. Cras vulputate ullamcorper ligula a rhoncus. Nunc venenatis elementum ligula in semper. Mauris malesuada purus nunc, et ultricies leo aliquam ac. Ut sit amet nunc id magna accumsan hendrerit in eget metus.",
-    author: `@_akzhy`,
+    author: `alemarcha`,
+    linkAuthor: `https://www.linkedin.com/in/alemarcha/`,
     blogItemsPerPage: 10,
     portfolioItemsPerPage: 10,
-    darkmode: true,
+    darkmode: false,
     switchTheme: true,
     navLinks: [
         {
